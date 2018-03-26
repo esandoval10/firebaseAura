@@ -10,6 +10,15 @@ img {
     height: auto;
     margin: 7px;
 }
+.or {
+    margin: 0px 10px;
+}
+#user_div {
+    display: none;
+  }
 
+  #login_div {
+    display: inline-block;
+  }
 
 

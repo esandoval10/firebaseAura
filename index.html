@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+    <title>Aura</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,11 +27,11 @@
 
 
 
-<body class=" mb-2 bg-dark text-white">
+<body class= "mb-2 bg-dark text-white">
 
             <!--NAVBAR-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top mb-4">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">Aura</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -57,10 +59,16 @@
                           <a class="nav-link disabled" href="#">Disabled</a>
                         </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+                        <div id="user_div">
+                            <p id="user_para">Welcome to Aura</p>
+                            <button class="btn btn-secondary btn-sm" onclick="logout()">Logout</button>
+                        </div>
+                        <div id="login_div" class="nav-item">
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#register">Sign In</button>
+                            <p class="or">Or</p>
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#signup">Sign Up</button>
+                        </div>
+                     
                     </div>
                   </nav> <!--END NAVBAR-->
 
@@ -75,25 +83,101 @@
                 Your mood. Music that gets you.
         </p>
         <br>
-        <br>
-        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#register">Sign In</button>
-        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#signup">Sign Up</button>
+    
     </div> <!--End Title on main page-->
-
-    <br>
-    <br>
-    <br>
-    <br>
-
     
     <!--EMOJI PIC-->
 
-    <div class="row mt-12 text-center mt-4">
-        <div class="col-lg image-fluid">
-            <img src="images/wallpaper.jpg" class="img-fluid" data-name="artistic">
-        </div>
-    </div>
+        <!--Video player/////////////-->
+        <div class="row mt-12 text-center mt-4 w-50 p-3 mx-auto">
+                <div class="col-lg">
+                        <div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div><!--End Video player/////////////-->
     <!--END EMOJI PIC-->
+
+
+            <!-- EMOJI MOODS BTNS - all images match mood title-->
+            <div class="row mt-12 text-center mt-4">
+                    <div class="col-lg moodBttn">
+                        <h2>Choose your Mood! </h2>
+        
+                        <img src="images/artistic.png" class="img-fluid emojiMood" data-name="artistic">
+        
+                        <img src="images/beyonce.png" class="img-fluid emojiMood" alt="beyonce">
+        
+                        <img src="images/calm.png" class="img-fluid emojiMood" alt="calm">
+        
+                        <img src="images/depressed.png" class="img-fluid emojiMood" alt="depressed">
+        
+                        <img src="images/femme.png" class="img-fluid emojiMood" alt="femme">
+        
+                        <img src="images/femme.png" class="img-fluid emojiMood" alt="femme">
+        
+                        <img src="images/fine.png" class="img-fluid emojiMood" alt="fine">
+        
+                        <img src="images/happy.png" class="img-fluid emojiMood" alt="happy">
+        
+                        <img src="images/heartbreak .png" class="img-fluid emojiMood" alt="heartbreak">
+        
+                        <img src="images/intelligent.png" class="img-fluid emojiMood" alt="intelligent">
+        
+                        <img src="images/love.png" class="img-fluid emojiMood" alt="love">
+        
+                        <img src="images/motivated.png" class="img-fluid emojiMood" alt="motivated">
+        
+                        <img src="images/party.png" class="img-fluid emojiMood" alt="party">
+        
+                        <img src="images/sad.png" class="img-fluid emojiMood" alt="sad">
+        
+                        <img src="images/Sleepy.png" class="img-fluid emojiMood" alt="sleepy">
+                    </div>
+                </div>   <!--END EMOJI MOODS BTNS - all images match mood title-->
+        
+        
+        <!--SEARCH BAR--> 
+                <div class="input-group w-50 p-3 mx-auto mt-5">
+                    <!-- mx auto makes btn and search bar align in center-->
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary p-3 bg-primary text-white" type="button">Go</button>
+                        <!-- p-3 bg-primary text-white setting button to blue  -->
+                    </div>
+                </div>  <!--END SEARCH BAR--> 
+
+                        <!--ABOUT OPTIONS GENRES-->
+        <div class="row mt-12">
+                <div class="col-lg">
+                    <h3 class="mb-4"> About </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+                </div>
+                <div class="col-lg">
+                    <h3 class="mb-4"> Options </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+    
+                </div>
+                <div class="col-lg">
+                    <h3 class="mb-4"> Genres </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+                </div>
+            </div><!--END ABOUT OPTIONS GENRES-->
 
 
 
@@ -114,7 +198,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -123,29 +207,29 @@
     
     
                         <!-- inputting form-->
-                        <form>
+                        <div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="password" class="form-control" id="password_field" placeholder="Password">
                             </div>
-                            <div class="form-check">
+                            <!-- <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            </div> -->
+                            <button onclick="login()" type="submit" class="btn btn-primary">Log In</button>
     
     
                             <!--Google +-->
                             <button type="button" class="btn btn-gplus">
                                 <i class="fa fa-google-plus pr-1"></i> Google +</button>
     
-    
-                        </form>
+                         </div>
+                        
                     </div>
     
                 </div>
@@ -196,6 +280,22 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
         crossorigin="anonymous"></script>
+    <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+          apiKey: "AIzaSyB8bOyeVHh1frtus7dH_JPYsfHFfPulIu8",
+          authDomain: "aura-77f8f.firebaseapp.com",
+          databaseURL: "https://aura-77f8f.firebaseio.com",
+          projectId: "aura-77f8f",
+          storageBucket: "aura-77f8f.appspot.com",
+          messagingSenderId: "651818152870"
+        };
+      
+          firebase.initializeApp(config);
+        </script>
+        <script src="aura.js"></script>
 
 </body>
 
