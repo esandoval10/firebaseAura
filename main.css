@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url("images/wallpaper.jpg");
+    background-size: 1250px 450px;
+    font-family: 'Bree Serif', serif;
+    color: white;
+}
+
+img {
+    max-width: auto;
+    height: auto;
+    margin: 7px;
+}
+
+
+
