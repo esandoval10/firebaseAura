@@ -41,10 +41,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   function signUp(){
 
-    var userEmail = document.getElementById("email_sign").value;
-    var userPass = document.getElementById("password_sign").value;
+    var signEmail = document.getElementById("email_sign").value;
+    var signPass = document.getElementById("password_sign").value;
   
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(signEmail, signPass).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -61,9 +61,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   var database = firebase.database();
   
 //   Initial Values
-  var globalCounter = 11,
-    topPlaylist = "gangsta",
-    selectedPlaylist = "gangsta",
+  var globalCounter = 0,
+    topPlaylist = "",
+    selectedPlaylist = "",
     currentPlaylist = null;
     playlistId = ""
 
@@ -156,7 +156,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     function createPlayer(){
       player = new YT.Player('player', 
       {
-        height: '390',
+        height: '640',
         width: '640',
         playerVars: 
         {
@@ -198,6 +198,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 $(document).on('click', '.emojiMood', function() {
 
+    $("#player").empty();
+
     selectedPlaylist = $(this).data('name');
     console.log(selectedPlaylist);
 
@@ -206,7 +208,6 @@ $(document).on('click', '.emojiMood', function() {
 
     playlistId = currentPlaylist.id;
     console.log(playlistId);
-    
 
     createPlayer();
 

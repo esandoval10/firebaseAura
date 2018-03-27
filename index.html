@@ -37,12 +37,12 @@
                 <p id="user_para">Welcome to Aura</p>
                 <button class="btn btn-secondary btn-sm" onclick="logout()">Logout</button>
             </div>
-            <div id="login_div" class="nav-item">
-                <form class="form-inline">
+            <div id="login_div" >
+                <!-- <form class="form-inline"> -->
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#register">Sign In</button>
                     <p class="or">Or</p>
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#signup">Sign Up</button>
-                    <form class="form-inline">
+                <!-- <form class="form-inline"> -->
             </div>
         </div>
     </nav><!--END NAVBAR-->
@@ -66,9 +66,11 @@
 
     <div class="row mt-12 text-center mb-4">
         <div class="col">
-            <div id "player"></div>
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
+            <div id ="player">
+
+            </div>
+            <!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe> -->
         </div>
     </div>
     </div> <!--End Video player/////////////-->
@@ -90,22 +92,22 @@
       
         <div class="row moodBttn  mt-4 mb-4">
             <div class="col">
-                <img class="image-fluid" src="images/angry.png" class="img-fluid emojiMood" data-name="angry">
+                <img src="images/angry.png" class="img-fluid emojiMood" data-name="angry">
                 <h3>Angry</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/artistic.png" class="img-fluid emojiMood" data-name="artistic">
+                <img src="images/artistic.png" class="img-fluid emojiMood" data-name="artistic">
                 <h3>Artistic</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/beyonce.png" class="img-fluid emojiMood" data-name="beyonce" alt="beyonce">
+                <img src="images/beyonce.png" class="img-fluid emojiMood" data-name="beyonce" alt="beyonce">
                 <h3>Beyonce</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/calm.png" class="img-fluid emojiMood" data-name="calm" alt="calm">
+                <img src="images/calm.png" class="img-fluid emojiMood" data-name="calm" alt="calm">
                 <h3>Calm</h3>
             </div>
         </div>
@@ -113,22 +115,21 @@
 
         <div class="row moodBttn  mt-4 mb-4">
             <div class="col">
-                <img class="image-fluid" src="images/depressed.png" class="img-fluid emojiMood" data-name="depressed" alt="depressed">
+                <img src="images/depressed.png" class="img-fluid emojiMood" data-name="depressed" alt="depressed">
                 <h3>Depressed</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/femme.png" class="img-fluid emojiMood" data-name="femme" alt="femme">
+                <img src="images/femme.png" class="img-fluid emojiMood" data-name="femme" alt="femme">
                 <h3>Femme</h3>
             </div>
 
-            <div class="col">
-                <img class="image-fluid" src="images/happy.png" class="img-fluid emojiMood" data-name="happy" alt="happy">
+            <div src="images/happy.png" class="img-fluid emojiMood" data-name="happy" alt="happy">
                 <h3>Happy</h3>
             </div>
 
             <div  class="col">
-                <img class="image-fluid" src="images/intelligent.png" class="img-fluid emojiMood" data-name="intelligent" alt="intelligent">
+                <img src="images/intelligent.png" class="img-fluid emojiMood" data-name="intelligent" alt="intelligent">
                 <h3>Intelligent</h3>
             </div>
         </div>
@@ -136,22 +137,22 @@
 
         <div class="row moodBttn  mt-4 mb-4">
             <div class="col">
-                <img class="image-fluid" src="images/love.png" class="img-fluid emojiMood" data-name="love" alt="love">
+                <img src="images/love.png" class="img-fluid emojiMood" data-name="love" alt="love">
                 <h3>Love</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/party.png" class="img-fluid emojiMood" data-name="party" alt="party">
+                <img src="images/party.png" class="img-fluid emojiMood" data-name="party" alt="party">
                 <h3>Party</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/sad.png" class="img-fluid emojiMood" data-name="sad" alt="sad">
+                <img src="images/sad.png" class="img-fluid emojiMood" data-name="sad" alt="sad">
                 <h3>Sad</h3>
             </div>
 
             <div class="col">
-                <img class="image-fluid" src="images/Sleepy.png" class="img-fluid emojiMood" data-name="sleepy" alt="sleepy">
+                <img src="images/Sleepy.png" class="img-fluid emojiMood" data-name="sleepy" alt="sleepy">
                 <h3>Sleepy</h3>
             </div>
         </div>
@@ -282,7 +283,7 @@
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="password_sign" placeholder="Password">
                             </div>
-                            <button onclick="signUp()" type="submit" class="btn btn-primary">Log In</button>
+                            <button onclick="signUp()" type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
                         <!-- inputting form /////GOOGLE BTN 
                         <form>

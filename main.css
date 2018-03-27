@@ -28,7 +28,7 @@ img {
   }
 
   #login_div {
-    display: inline-block;
+    display: block;
   }
   iframe {
     max-width: 100%;
