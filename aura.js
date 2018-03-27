@@ -218,7 +218,7 @@ $(document).on('click', '.emojiMood', function() {
 
     if (playlistCount > globalCounter){
 
-        alert("new favorite mood");
+        console.log("new favorite mood");
 
         database.ref().set({
             globalCounter: playlistCount,
