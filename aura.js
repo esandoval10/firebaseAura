@@ -156,7 +156,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     function createPlayer(){
       player = new YT.Player('player', 
       {
-        height: '640',
+        height: '390',
         width: '640',
         playerVars: 
         {
