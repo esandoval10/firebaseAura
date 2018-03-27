@@ -199,6 +199,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 $(document).on('click', '.emojiMood', function() {
 
     $("#player").empty();
+    // location.reload();
 
     selectedPlaylist = $(this).data('name');
     console.log(selectedPlaylist);
@@ -226,6 +227,7 @@ $(document).on('click', '.emojiMood', function() {
     }
 // OR HERE
     // event.preventDefault();
+    
 });
 
 
