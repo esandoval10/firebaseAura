@@ -141,7 +141,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             timesPlayed : 0,
         },
     ];
-    console.log(playlists.length);
+    // console.log(playlists.length);
 
     var tag = document.createElement('script');
 
@@ -225,7 +225,7 @@ $(document).on('click', '.emojiMood', function() {
         });
     }
 // OR HERE
-    event.preventDefault();
+    // event.preventDefault();
 });
 
 
