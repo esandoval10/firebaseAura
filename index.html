@@ -35,11 +35,11 @@
             <a class="navbar-brand" href="#">Aura</a>
             <div id="user_div">
                 <p id="user_para">Welcome to Aura</p>
-                <button class="btn btn-secondary btn-sm" onclick="logout()">Logout</button>
+                <button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
             </div>
             <div id="login_div" >
                 <!-- <form class="form-inline"> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#register">Sign In</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#register">Log In</button>
                     <p class="or">Or</p>
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#signup">Sign Up</button>
                 <!-- <form class="form-inline"> -->
@@ -263,15 +263,17 @@
 
 
         <!--MODAL - SIGN UP-->
+
         <div class="modal fade text-dark" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup form" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-
-                    </div>
-                    <div class="modal-body">
-
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
                                      <!-- inputting form-->
                         <div>
                             <div class="form-group">
