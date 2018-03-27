@@ -38,10 +38,24 @@ firebase.auth().onAuthStateChanged(function(user) {
     });
   
   }
+
+  function signUp(){
+
+    var userEmail = document.getElementById("email_sign").value;
+    var userPass = document.getElementById("password_sign").value;
+  
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+  
+      console.log("Error : " + errorMessage);
+    });
+  };
   
   function logout(){
     firebase.auth().signOut();
-  }
+  };
   
 
   var database = firebase.database();
@@ -51,91 +65,110 @@ firebase.auth().onAuthStateChanged(function(user) {
     topPlaylist = "gangsta",
     selectedPlaylist = "gangsta",
     currentPlaylist = null;
-    playlistId = "00j&f"
+    playlistId = ""
 
 //  Song Playlists
     playlists = [
         happy = {
             name : "happy",
+            id : "PLt1JKPbhDoObzEaQuyp-cml5C1ajeSyPp",
             timesPlayed : 0,
-            id : "00j&m",
+            
         },
         sad = {
             name : "sad",
-            songsOne : "ayay",
-            timesPlayed : 1,
+            id : "PLt1JKPbhDoObZOyTTis5HU3nvFg5kW9Cr",
+            timesPlayed : 0,
         },
         angry = {
             name : "angry",
-            songsOne : "ayay",
-            timesPlayed : 2,
+            id : "PLt1JKPbhDoOaM04RFYG7TODvW1zaTUEnZ",
+            timesPlayed : 0,
         },
         love = {
             name : "love",
-            songsOne : "ayay",
-            timesPlayed : 3,
+            id : "PLt1JKPbhDoObeWgrfkeV3Yqe8TL93dpU7",
+            timesPlayed : 0,
         },
         fine = {
             name : "fine",
-            songsOne : "ayay",
-            timesPlayed : 4,
+            id : "PLt1JKPbhDoObdw0UK9I8ZOnSEFSTIk5fz",
+            timesPlayed : 0,
         },
         sleepy = {
             name : "sleepy",
-            songsOne : "ayay",
-            timesPlayed : 5,
+            id : "PLt1JKPbhDoObCF3_2XLM013utylmXmPa8",
+            timesPlayed : 0,
         },
         motivated = {
             name : "motivated",
-            songsOne : "ayay",
-            timesPlayed : 6,
+            id : "PLt1JKPbhDoOZnQ_tKH1UQtid7sbUBgy3S",
+            timesPlayed : 0,
         },
         depressed = {
             name : "depressed",
-            songsOne : "ayay",
-            timesPlayed : 7,
+            id : "PLt1JKPbhDoObXSMz7lH9Itj3yFAWCz7xd",
+            timesPlayed : 0,
         },
         femme = {
             name : "femme",
-            songsOne : "ayay",
-            timesPlayed : 8,
+            id : "PLt1JKPbhDoOaL_FhPnCacLDQlG7F5YxJf",
+            timesPlayed : 0,
         },
         party = {
             name : "party",
-            songsOne : "ayay",
-            timesPlayed : 9,
+            id : "PLt1JKPbhDoOZwp-LuVeLlkKZRywx2AwCA",
+            timesPlayed : 0,
         },
         beyonce = {
             name : "beyonce",
-            songsOne : "ayay",
-            timesPlayed : 10,
+            id : "PLt1JKPbhDoObo1zpGwalf_pVkn0pDf6P0",
+            timesPlayed : 0,
         },
         intellectual = {
             name : "intellectual",
-            songsOne : "ayay",
-            timesPlayed : 11,
+            id : "PLt1JKPbhDoObaf_uzak9s_ymjaHSuftZa",
+            timesPlayed : 0,
         },
         calm = {
             name : "calm",
-            songsOne : "ayay",
-            timesPlayed : 12,
+            id : "PLt1JKPbhDoOaUmmNMQzgo3cbwtcsBCKxf",
+            timesPlayed : 0,
         },
         artistic = {
             name : "artistic",
-            songsOne : "ayay",
-            timesPlayed : 13,
+            id : "PLt1JKPbhDoOZMvLUZB0wuxynWe38Mo4gb",
+            timesPlayed : 0,
         },
-        heartbreak = {
-            name : "heartbreak",
-            songsOne : "ayay",
-            timesPlayed : 14,       
-        },
-        gangsta = {
-            name: "gangsta",
-            songsOne : "ayay",
-            timesPlayed : 15,
-        }
     ];
+    console.log(playlists.length);
+
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+   
+   var player;
+   
+    function onYouTubeIframeAPIReady() {
+    }
+    function createPlayer(){
+      player = new YT.Player('player', 
+      {
+        height: '390',
+        width: '640',
+        playerVars: 
+        {
+          listType:'playlist',
+          list: playlistId
+        }
+      });
+   }
+   // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
 
     findName = function(selectedPlaylist){
         for(var i = 0; i < playlists.length; i++){
@@ -169,7 +202,13 @@ $(document).on('click', '.emojiMood', function() {
     console.log(selectedPlaylist);
 
     currentPlaylist = findName(selectedPlaylist);
-    console.log(currentPlaylist);
+    console.log(currentPlaylist); 
+
+    playlistId = currentPlaylist.id;
+    console.log(playlistId);
+    
+
+    createPlayer();
 
     currentPlaylist.timesPlayed ++;
 
@@ -184,6 +223,8 @@ $(document).on('click', '.emojiMood', function() {
             topPlaylist : currentPlaylist
         });
     }
-
+// OR HERE
     event.preventDefault();
 });
+
+

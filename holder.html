@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Aura</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-social.css">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+
+
+<body class= "mb-2 bg-dark text-white">
+
+            <!--NAVBAR-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top mb-4">
+                    <a class="navbar-brand" href="#">Aura</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                      </ul>
+                        <div id="user_div">
+                            <p id="user_para">Welcome to Aura</p>
+                            <button class="btn btn-secondary btn-sm" onclick="logout()">Logout</button>
+                        </div>
+                        <div id="login_div" class="nav-item">
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#register">Sign In</button>
+                            <p class="or">Or</p>
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#signup">Sign Up</button>
+                        </div>
+                     
+                    </div>
+                  </nav> <!--END NAVBAR-->
+
+    <br>
+    <br>
+    
+
+    <!--Title on main page-->
+    <div class="container text-center mt-4">
+        <h1 class="display-1 mt-4">Aura</h1>
+        <p class="lead">
+                Your mood. Music that gets you.
+        </p>
+        <br>
+    
+    </div> <!--End Title on main page-->
+    
+    <!--EMOJI PIC-->
+
+        <!--Video player/////////////-->
+        <div class="row mt-12 text-center mt-4 w-50 p-3 mx-auto">
+                <div class="col-lg">
+                <div id="player">
+
+                </div>
+            </div>
+        </div><!--End Video player/////////////-->
+    <!--END EMOJI PIC-->
+
+
+            <!-- EMOJI MOODS BTNS - all images match mood title-->
+            <div class="row mt-12 text-center mt-4">
+                    <div class="col-lg moodBttn">
+                        <h2>Choose your Mood! </h2>
+        
+                        <img src="images/artistic.png" class="img-fluid emojiMood" data-name="artistic">
+        
+                        <img src="images/beyonce.png" class="img-fluid emojiMood" alt="beyonce">
+        
+                        <img src="images/calm.png" class="img-fluid emojiMood" alt="calm">
+        
+                        <img src="images/depressed.png" class="img-fluid emojiMood" alt="depressed">
+        
+                        <img src="images/femme.png" class="img-fluid emojiMood" alt="femme">
+        
+                        <img src="images/femme.png" class="img-fluid emojiMood" alt="femme">
+        
+                        <img src="images/fine.png" class="img-fluid emojiMood" alt="fine">
+        
+                        <img src="images/happy.png" data-name="happy" class="img-fluid emojiMood" alt="happy">
+        
+                        <img src="images/heartbreak .png" class="img-fluid emojiMood" alt="heartbreak">
+        
+                        <img src="images/intelligent.png" class="img-fluid emojiMood" alt="intelligent">
+        
+                        <img src="images/love.png" class="img-fluid emojiMood" alt="love">
+        
+                        <img src="images/motivated.png" class="img-fluid emojiMood" alt="motivated">
+        
+                        <img src="images/party.png" class="img-fluid emojiMood" alt="party">
+        
+                        <img src="images/sad.png" class="img-fluid emojiMood" alt="sad">
+        
+                        <img src="images/Sleepy.png" class="img-fluid emojiMood" alt="sleepy">
+                    </div>
+                </div>   <!--END EMOJI MOODS BTNS - all images match mood title-->
+        
+        
+        <!-- SEARCH BAR--> 
+                <!-- <div class="input-group w-50 p-3 mx-auto mt-5"> -->
+                    <!-- mx auto makes btn and search bar align in center-->
+                    <!-- <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary p-3 bg-primary text-white" type="button">Go</button> -->
+                        <!-- p-3 bg-primary text-white setting button to blue  -->
+                    <!-- </div> -->
+                <!-- </div>  END SEARCH BAR  -->
+
+                        <!--ABOUT OPTIONS GENRES-->
+        <div class="row mt-12">
+                <div class="col-lg">
+                    <h3 class="mb-4"> About </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+                </div>
+                <div class="col-lg">
+                    <h3 class="mb-4"> Options </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+    
+                </div>
+                <div class="col-lg">
+                    <h3 class="mb-4"> Genres </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid, doloribus ut quaerat ad culpa alias magnam,
+                    impedit, tempore necessitatibus optio natus repudiandae consectetur ipsum blanditiis soluta quisquam deserunt
+                    veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae cum hic! Hic laborum illo
+                    iure magni! In, non cumque, illum nam illo ratione asperiores nulla adipisci ducimus, et amet. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Et ex nostrum officiis laboriosam ipsa repudiandae eius odit
+                    quidem incidunt obcaecati dicta quos, voluptatum atque quo, eligendi ducimus at consectetur recusandae?
+                </div>
+            </div><!--END ABOUT OPTIONS GENRES-->
+
+
+
+
+    <!-- FOOTER -->
+    <div class="row py-3">
+        <div class="col-md-7"> </div>
+        <div class="col-md text-md-right">
+            <small>&copy; SMU Coding Camp </small>
+        </div>s
+    </div>
+    <!-- END FOOTER -->
+
+
+
+    <!-- MODAL - SIGN INNNNN - this goes inside the SIGN UP BTN -->
+    <div class="modal fade text-dark" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+    
+    
+                        <!-- inputting form-->
+                        <div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="password_field" placeholder="Password">
+                            </div>
+                            <!-- <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div> -->
+                            <button onclick="login()" type="submit" class="btn btn-primary">Log In</button>
+    
+    
+                            <!--Google +-->
+                            <button type="button" class="btn btn-gplus">
+                                <i class="fa fa-google-plus pr-1"></i> Google +</button>
+    
+                         </div>
+                        
+                    </div>
+    
+                </div>
+            </div>
+        </div>     <!-- END MODAL - SIGN INNNNN - this goes inside the SIGN INNN  -->
+    
+    
+    
+    
+    
+        <!--MODAL - SIGN UP-->
+        <div class="modal fade text-dark" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup form" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign Up!</h5>
+    
+                    </div>
+                    <div class="modal-body">
+                        <!-- inputting form-->
+                        <form>
+                            <button class="btn btn-block btn-social btn-lg btn-google">
+                                <span class="fa fa-google"></span> Sign Up with Google
+                            </button>
+                        </form>
+                    </div>
+    
+                </div>
+            </div>
+        </div> <!-- END MODAL - SIGN INNNNN - this goes inside the SIGN UPPP  -->
+    
+    
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+
+    <!--Font AWESOME-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+        crossorigin="anonymous"></script>
+
+        
+    <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+          apiKey: "AIzaSyB8bOyeVHh1frtus7dH_JPYsfHFfPulIu8",
+          authDomain: "aura-77f8f.firebaseapp.com",
+          databaseURL: "https://aura-77f8f.firebaseio.com",
+          projectId: "aura-77f8f",
+          storageBucket: "aura-77f8f.appspot.com",
+          messagingSenderId: "651818152870"
+        };
+      
+          firebase.initializeApp(config);
+        </script>
+        <script src="aura.js"></script>
+
+</body>
+
+</html>
